@@ -1,24 +1,23 @@
-"use client";
+import { useState } from 'react';
 
-import { useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function App() {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [translate, setTranslate] = useState(false);
   const [width, setWidth] = useState(400);
   const [height, setHeight] = useState(300);
-  const [generatedImage, setGeneratedImage] = useState("");
+  const [generatedImage, setGeneratedImage] = useState('');
 
   const handleGenerate = () => {
     // In a real application, you would call an API to generate the image here
